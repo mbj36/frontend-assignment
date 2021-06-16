@@ -1,9 +1,14 @@
 import React from 'react';
 import { Card, Image, Text, Rating } from './MovieCard.styles';
 
-function MovieCard({ movie }) {
+function MovieCard({ movie, setSelectedMovie, setIsOpen }) {
   return (
-    <Card>
+    <Card
+      onClick={() => {
+        setIsOpen(true);
+        setSelectedMovie(movie);
+      }}
+    >
       <Rating>{movie.vote_average}</Rating>
       <Image
         src={`https://themoviedb.org/t/p/w220_and_h330_face/${movie.poster_path}`}

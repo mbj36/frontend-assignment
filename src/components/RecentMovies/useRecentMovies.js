@@ -4,6 +4,8 @@ import axios from 'axios';
 export const useRecentMovies = () => {
   const [movies, setMovies] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const [selectedMovie, setSelectedMovie] = useState(null);
 
   useEffect(() => {
     getRecentMovies();
@@ -30,5 +32,9 @@ export const useRecentMovies = () => {
   return {
     movies,
     loading,
+    isOpen,
+    setIsOpen,
+    selectedMovie,
+    setSelectedMovie,
   };
 };
