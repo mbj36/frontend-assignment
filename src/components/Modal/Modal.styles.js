@@ -10,6 +10,11 @@ export const ModalStyles = styled.div`
   z-index: 1000;
   min-height: 300px;
   width: 600px;
+
+  @media (max-width: 768px) {
+    width: 300px;
+    height: auto;
+  }
 `;
 
 export const OverlayStyles = styled.div`
@@ -29,10 +34,17 @@ export const ModalHeader = styled.div`
 
 export const ModalBody = styled.div`
   display: flex;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 export const Image = styled.img`
   height: 400px;
+  @media (max-width: 768px) {
+    height: 200px;
+  }
 `;
 
 export const Heading = styled.div`
