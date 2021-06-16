@@ -5,7 +5,7 @@ import MovieCard from '../MovieCard/MovieCard';
 import Loader from '../Loader/Loader';
 import Modal from '../Modal/Modal';
 
-function RecentMovies() {
+function RecentMovies({ searchInput }) {
   const {
     movies,
     loading,
@@ -13,7 +13,7 @@ function RecentMovies() {
     setIsOpen,
     selectedMovie,
     setSelectedMovie,
-  } = useRecentMovies();
+  } = useRecentMovies(searchInput);
 
   if (loading) {
     return (
