@@ -9,3 +9,8 @@ export const Movies = styled.div`
   display: flex;
   flex-flow: row wrap;
 `;
+
+export const LoaderStyles = styled.div`
+  text-align: center;
+  margin-top: 30%;
+`;

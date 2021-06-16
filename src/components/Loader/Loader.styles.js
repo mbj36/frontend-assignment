@@ -5,8 +5,8 @@ export const StyledSpinner = styled.svg`
   margin: -25px 0 0 -25px;
   width: 50px;
   height: 50px;
-  display: flex;
-  justify-content: center;
+  display: inline-block;
+  align-items: center;
 
   & .path {
     stroke: #5652bf;

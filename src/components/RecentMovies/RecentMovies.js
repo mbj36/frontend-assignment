@@ -1,5 +1,5 @@
 import React from 'react';
-import { Heading, Movies } from './RecentMovies.styles';
+import { Heading, Movies, LoaderStyles } from './RecentMovies.styles';
 import { useRecentMovies } from './useRecentMovies';
 import MovieCard from '../MovieCard/MovieCard';
 import Loader from '../Loader/Loader';
@@ -16,7 +16,11 @@ function RecentMovies() {
   } = useRecentMovies();
 
   if (loading) {
-    return <Loader />;
+    return (
+      <LoaderStyles>
+        <Loader />
+      </LoaderStyles>
+    );
   }
 
   return (
